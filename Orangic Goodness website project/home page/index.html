@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <a class="btn btn-primary" href="basicboot.html" role="button">LOGIN</a>
+
+      <div class="form-footer">
+        <p>Don't have an account? <a href="#">Sign Up</a></p>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission for now
+
+      // Capture email and password
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // Basic Validation
+      if (!email || !password) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      // Placeholder behavior
+      alert(`Logged in with:\nEmail: ${email}\nPassword: ${password}`);
+      // Redirect or submit data to backend server here
+    });
+  </script>
+
+</body>
+</html>
