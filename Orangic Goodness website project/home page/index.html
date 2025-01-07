@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Form</title>
   <link rel="stylesheet" href="style.css">
-  
-</head>
+  </head>
 <body>
-
-  <div class="login-container">
+<div class="login-container">
     <h2>Login</h2>
     <form id="loginForm">
       <div class="form-group">
@@ -27,25 +25,17 @@
       </div>
     </form>
   </div>
-
-  <script>
+ <script>
     document.getElementById('loginForm').addEventListener('submit', function(event) {
       event.preventDefault(); 
-
-      
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-
-      
+const email = document.getElementById('email').value;
+const password = document.getElementById('password').value;
       if (!email || !password) {
         alert('Please fill in all fields.');
-        return;
+     return;
       }
-
-      
-      alert(`Logged in with:\nEmail: ${email}\nPassword: ${password}`);
+alert(`Logged in with:\nEmail: ${email}\nPassword: ${password}`);
     });
   </script>
-
-</body>
+  </body>
 </html>
