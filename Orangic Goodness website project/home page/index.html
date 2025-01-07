@@ -30,21 +30,20 @@
 
   <script>
     document.getElementById('loginForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent form submission for now
+      event.preventDefault(); 
 
-      // Capture email and password
+      
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
 
-      // Basic Validation
+      
       if (!email || !password) {
         alert('Please fill in all fields.');
         return;
       }
 
-      // Placeholder behavior
+      
       alert(`Logged in with:\nEmail: ${email}\nPassword: ${password}`);
-      // Redirect or submit data to backend server here
     });
   </script>
 
